@@ -199,7 +199,7 @@
             <thead>
               <tr>
                 <th class="has-text-centered">Method</th>
-                <th class="has-text-centered">Spectral (&chi;<sup>2</sup>) &darr;</th>
+                <th class="has-text-centered">&chi;<sup>2</sup> &darr;</th>
                 <th class="has-text-centered">SSIM &uarr;</th>
                 <th class="has-text-centered">PSNR &uarr;</th>
               </tr>
@@ -226,7 +226,7 @@
             </tbody>
           </table>
           <p class="is-size-7 has-text-centered" style="margin-top: 10px;">
-            <em>Metrics on JunoCam2HST test set. Spatial metrics (SSIM, PSNR) are computed against the source JunoCam image.</em>
+            <em>Metrics on JunoCam2HST test set. Spatial metrics (SSIM, PSNR) are computed against the source JunoCam image, Spectral metrics (&chi<sup>2</sup>) are computed again target HST images.</em>
           </p>
         </div>
       </div>
@@ -244,7 +244,7 @@
         </div>
         <div class="content has-text-centered">
           <img src="./static/images/juno_qual.png" alt="Qualitative Comparison" style="width: 100%;">
-          <p class="is-size-6">Figure 3: Comparisons against baselines. SP-I2I retains the high-frequency cloud bands visible in the Source (JunoCam) while matching the Target (HST) color profile.</p>
+          <p class="is-size-6">Comparisons against baselines. SP-I2I retains the high-frequency cloud bands visible in the Source (JunoCam) while matching the Target (HST) color profile.</p>
         </div>
         <br/>
 
@@ -267,7 +267,7 @@
             <a href="./static/images/unsb_mosaic.png" target="_blank">
               <img src="./static/images/unsb_mosaic.png" alt="UNSB Baseline Mosaic"/>
             </a>
-            <p><strong>UNSB Baseline</strong><br>(Blurred Detail)</p>
+            <p><strong>UNSB Baseline</strong><br>(Blurry Details)</p>
           </div>
           <div class="column is-4 has-text-centered">
             <a href="./static/images/ours_mosaic.png" target="_blank">
