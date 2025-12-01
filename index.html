@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="SP-I2I: Structure-Preserving Unpaired Image Translation to Photometrically Calibrate JunoCam with Hubble Data.">
+  <meta name="keywords" content="JunoCam, Hubble, Image Translation, SP-I2I, Planetary Science, Computer Vision">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Structure-Preserving Unpaired Image Translation to Photometrically Calibrate JunoCam with Hubble Data</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Structure-Preserving Unpaired Image Translation to Photometrically Calibrate JunoCam with Hubble Data</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://singhularadi.github.io/">Aditya Pratap Singh</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="#">Shrey Shah</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="#">Ramanakumar Sankar</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Emma Dahl</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ggeorgak11.github.io/">Georgios Georgakis</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Gerald Eichstädt</a><sup>5</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://bucherb.github.io/">Bernadette Bucher</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Michigan,</span>
+            <span class="author-block"><sup>2</sup>University of California, Berkeley,</span>
+            <span class="author-block"><sup>3</sup>California Institute of Technology,</span>
+            <span class="author-block"><sup>4</sup>Jet Propulsion Laboratory,</span>
+            <span class="author-block"><sup>5</sup>Independent Researcher</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://youtu.be/ZPtnz2bvTvE?si=RTz7e90GYuV91dZ7"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>JunoCam2HST Dataset (Coming Soon)</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser" id="video-section">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted controls loop playsinline height="100%">
+        <source src="./static/videos/mosaic_comparison.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">SP-I2I</span> calibrates high-resolution JunoCam images using Hubble data, preserving fine-scale atmospheric details that standard methods blur out.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Insights into Jupiter's atmospheric dynamics are vital for understanding planetary meteorology and exoplanetary gas giant atmospheres. To study these dynamics, we require high-resolution, photometrically calibrated observations. Over the last 9 years, the Juno spacecraft's optical camera, JunoCam, has generated a unique dataset with high spatial resolution, but it lacks absolute photometric calibration, hindering quantitative analysis.
+          </p>
+          <p>
+            Using observations from the Hubble Space Telescope (HST) as a proxy for a calibrated sensor, we present a novel method for performing unpaired image-to-image translation (I2I) between JunoCam and HST. Our structure-preserving I2I method, <strong>SP-I2I</strong>, incorporates explicit frequency-space constraints designed to preserve high-frequency features ensuring the retention of fine, small-scale spatial structures—essential for studying Jupiter's atmosphere.
+          </p>
+          <p>
+            We demonstrate that state-of-the-art unpaired image-to-image translation methods are inadequate to address this problem, and we show the broader impact of our proposed solution on relevant remote sensing data for the pansharpening task.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method: Structure-Preserving I2I</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our primary challenge is to apply the scientifically calibrated color profile of HST observations to high-resolution JunoCam images without sacrificing JunoCam's superior spatial detail. Standard adversarial training tends to penalize fine-scale JunoCam structures as out-of-domain artifacts relative to the lower-resolution HST target.
+          </p>
+          <div class="content has-text-centered">
+            <img src="./static/images/method.png" alt="SP-I2I Method Overview" style="width: 100%;">
+          </div>
+          <p>
+            Our network (Figure above) disentangles the learning process into two streams:
+          </p>
+          <ul>
+            <li><strong>Gating Network:</strong> Acts as a dynamic low-pass filter, reweighing the predicted image to learn low-frequency color from the HST domain.</li>
+            <li><strong>Spatial Consistency Loss:</strong> Explicitly retains the high-frequency spatial detail from the original JunoCam source via a Laplacian pyramid loss.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Quantitative Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            We evaluate our method against state-of-the-art unpaired translation methods (UNSB and CUT).
+            <strong>SP-I2I</strong> achieves superior spatial fidelity (highest SSIM and PSNR) while maintaining a competitive spectral alignment with the HST target.
+          </p>
+        </div>
+        <div class="content is-centered">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" style="margin: auto; max-width: 800px;">
+            <thead>
+              <tr>
+                <th class="has-text-centered">Method</th>
+                <th class="has-text-centered">Spectral (&chi;<sup>2</sup>) &darr;</th>
+                <th class="has-text-centered">SSIM &uarr;</th>
+                <th class="has-text-centered">PSNR &uarr;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="has-text-centered">UNSB</td>
+                <td class="has-text-centered">0.0704</td>
+                <td class="has-text-centered">0.7450</td>
+                <td class="has-text-centered">19.7700</td>
+              </tr>
+              <tr>
+                <td class="has-text-centered">CUT</td>
+                <td class="has-text-centered">0.0430</td>
+                <td class="has-text-centered">0.7092</td>
+                <td class="has-text-centered">19.2751</td>
+              </tr>
+              <tr style="background-color: #e6e6e6; color: #000000; font-weight: 800; border: 2px solid #b5b5b5;">
+                <td class="has-text-centered">SP-I2I (Ours, L=6)</td>
+                <td class="has-text-centered">0.0681</td>
+                <td class="has-text-centered">0.9453</td>
+                <td class="has-text-centered">26.5560</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="is-size-7 has-text-centered" style="margin-top: 10px;">
+            <em>Metrics on JunoCam2HST test set. Spatial metrics (SSIM, PSNR) are computed against the source JunoCam image.</em>
+          </p>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
+
+        <h3 class="title is-4">Comparison with Baselines</h3>
+        <div class="content has-text-justified">
+          <p>
+            The baseline methods (CUT, UNSB) adopt the target color but fail to preserve fine spatial details, resulting in blurry outputs. In contrast, SP-I2I successfully retains the sharp source structures while fusing them with the calibrated HST color profile.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/juno_qual.png" alt="Qualitative Comparison" style="width: 100%;">
+          <p class="is-size-6">Figure 3: Comparisons against baselines. SP-I2I retains the high-frequency cloud bands visible in the Source (JunoCam) while matching the Target (HST) color profile.</p>
+        </div>
+        <br/>
+
+        <h3 class="title is-4">Mosaic Reconstruction (Perijove 18)</h3>
+        <div class="content has-text-justified">
+          <p>
+            We visually compare the calibration performance on the held-out Perijove 18 dataset. The baselines blur the rich atmospheric structures, whereas our method preserves them.
+            <strong>Click on the images below to view full resolution.</strong>
+          </p>
+        </div>
+
+        <div class="columns is-vcentered">
+          <div class="column is-4 has-text-centered">
+            <a href="./static/images/juno_mosaic.png" target="_blank">
+              <img src="./static/images/juno_mosaic.png" alt="Original JunoCam Mosaic"/>
+            </a>
+            <p><strong>Original JunoCam</strong><br>(Uncalibrated, High Detail)</p>
+          </div>
+          <div class="column is-4 has-text-centered">
+            <a href="./static/images/unsb_mosaic.png" target="_blank">
+              <img src="./static/images/unsb_mosaic.png" alt="UNSB Baseline Mosaic"/>
+            </a>
+            <p><strong>UNSB Baseline</strong><br>(Blurred Detail)</p>
+          </div>
+          <div class="column is-4 has-text-centered">
+            <a href="./static/images/ours_mosaic.png" target="_blank">
+              <img src="./static/images/ours_mosaic.png" alt="Ours SP-I2I Mosaic"/>
+            </a>
+            <p><strong>Ours (SP-I2I)</strong><br>(Calibrated + High Detail)</p>
+          </div>
+        </div>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+    @misc{singh2025structurepreservingunpairedimagetranslation,
+      title={Structure-Preserving Unpaired Image Translation to Photometrically Calibrate JunoCam with Hubble Data},
+      author={Aditya Pratap Singh and Shrey Shah and Ramanakumar Sankar and Emma Dahl and Gerald Eichstädt and Georgios Georgakis and Bernadette Bucher},
+      year={2025},
+      eprint={2511.22668},
+      archivePrefix={arXiv},
+      primaryClass={astro-ph.IM},
+      url={https://arxiv.org/abs/2511.22668},
+}
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="#">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="#" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Template borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
